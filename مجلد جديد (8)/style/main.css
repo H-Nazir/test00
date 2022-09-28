@@ -1,0 +1,250 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior:smooth;
+}
+:root
+{
+    --swiper-theme-color : rgb(254, 127, 0);
+}
+a
+{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+body
+{
+    font-family:cursive , sans-serif , Arial;
+    background: #111;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.txt
+{
+    width: 100%;
+    font-size: 4.5em;
+    color: rgba(0, 0, 0, .4);
+    -webkit-text-stroke: rgba(0, 0, 0, .7) .8px;
+    display: flex;
+    justify-content: center;
+    padding: 32px 0;
+    letter-spacing: 10px;
+}
+.txt::selection
+{
+    background:var(--swiper-theme-color);
+    color: #ddd;
+}
+.container
+{
+    width: 100%;
+    height: 100vh;
+}
+.container header
+{
+    z-index: 500;
+    width: 100%;
+    height: 72px;
+    background: rgba(0, 0, 0, .2);
+    display: flex;
+    align-items: center;
+    user-select: none;
+    position: fixed;
+}
+header .logo
+{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo img
+{
+    width: 110px;
+    cursor: pointer;
+    padding: 8px 0;
+}
+header nav
+{
+    margin-left: -5%;
+    width: 70%;
+}
+header nav ul
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+header nav ul a
+{
+    color: #ddd;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: .3s;
+}
+#op-mneu
+{
+    color: #ddd;
+    font-size: 1.8em;
+    font-weight: bold;
+    display: none;
+    float: right;
+    padding: 8px 16px;
+    margin: 7px 7px 0 0;
+}
+@media (max-width : 700px)
+{
+    header nav ul a
+{
+    font-size: 1em;
+}
+}
+@media (max-width : 476px)
+{
+    header nav ul
+{
+    display: none;
+}
+}
+header nav ul a:hover
+{
+    letter-spacing: 2px;
+    -webkit-text-stroke: var(--swiper-theme-color) .5px;
+}
+nav ul a.active
+{
+    background: var(--swiper-theme-color);
+    padding: 8px 18px;
+    border-radius: 30px;
+}
+header .order
+{
+    display: flex;
+    align-items: center;
+    color: #e4e4e4;
+}
+header .order i
+{
+    cursor: pointer;
+    transition: .3s;
+    font-size: 1.8em;
+    color: #ddd;
+}
+header i:hover
+{
+    -webkit-text-stroke: var(--swiper-theme-color) 1.4px;
+}
+
+
+.home
+{
+    background: url(../imgs/pizza2.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    min-width: 100%;
+    min-height:100vh;
+}
+.home::before
+{
+    content: 'Delicious';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    color: #ddd;
+    line-height: 30;
+    text-align: center;
+    font-size: 35px;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+}
+.home::after
+{
+    content: url(../imgs/logo.png);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.offers
+{
+    
+}
+footer pre
+{
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mneu
+{
+    background: #222;
+    width: 300px;
+    height: 60px;
+    display: none;
+    border-radius: 20px;
+    padding: 8px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    z-index: 10000;
+}
+@media (max-width :476px)
+{
+    .mneu
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+    .mneu a
+{
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    transition: .3s;
+}
+.mneu a:hover
+{
+    background: var(--i);
+}
+.mneu a.active
+{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #fff ;
+    background: var(--i);
+    transform: translateY(-25px);
+}
+.added
+{
+    display: none;
+}
